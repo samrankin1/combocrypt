@@ -19,7 +19,7 @@ def save_rsa_key(key, file):
 	"""Save a RSA key to the given file"""
 	with open(file, "w") as writer: # open the file for writing as text
 		key_bytes = key.exportKey("DER") # export the key to a bytes object
-		encoded = base64.b64encode(key_bytes) # encode the bytes with base64
+		encoded = base64.b64encode(key_bytes).decode("ascii") # encode the bytes with base64
 		writer.write(encoded) # write the base64 string to the given file
 
 def load_rsa_key(file):
@@ -128,5 +128,6 @@ def combo_decrypt_file_json(file, private_key):
 		data_json = reader.read() # read the entire contents of the file
 
 	return combo_decrypt_json(data_json, private_key) # deserialize and decrypt the JSON
+
 
 
