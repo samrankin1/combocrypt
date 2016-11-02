@@ -10,7 +10,7 @@ with open(path.join(here, "README.rst"), encoding = "utf-8") as f:
 
 setup(
 	name = "combocrypt",
-	version = "1.0.0",
+	version = "1.0.1",
 	description = "Variable-length public-key encryption scheme that utilizes a combination of RSA and AES ciphers",
 	long_description = long_description,
 	url = "https://github.com/samrankin1/combocrypt",
