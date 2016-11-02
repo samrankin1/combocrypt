@@ -1,3 +1,3 @@
 Requirements:
-    - Python 3
-    - pycrypto
+ - Python 3
+ - pycrypto
